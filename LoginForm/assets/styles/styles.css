@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/bg02.jpg);
     background-size: cover;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -38,7 +39,9 @@ input.inputField{
     background-color: #efeeee; /* add a background color */
     padding: 10px;
 }
-
+input:focus {
+    border: 1px solid rgb(200, 37, 237);
+}
 .submitbtn {
     background-color: rgb(200, 37, 237);
     height: 40px;
@@ -46,6 +49,7 @@ input.inputField{
     color: white;
     border-radius: 20px;
     border: none;
+    font-size: large;
 }
 
 .submitbtn:hover {
