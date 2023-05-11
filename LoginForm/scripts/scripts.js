@@ -40,5 +40,10 @@ function validateForm() {
       alert("All fields are required");
       return false;
   }
+  
+  if (pwd == pwd2) {
+    alert("Password do not match");
+    return false;
+  }
   return true;
 }
