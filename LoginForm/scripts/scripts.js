@@ -9,10 +9,10 @@ signin.addEventListener("click", function(event) {
 });
 
 ////////////////////////////////////////////////////
-/* Form Validation */
+/* Form Validation 
 const submitBtn = document.getElementById("submit");
-/*
-submitBtn.addEventListener('click', function() {
+
+submitBtn.addEventListener('click', function(event) {
   event.preventDefault();
   let fname = document.getElementById("fname").value;
   let lname = document.getElementById("lname").value;
@@ -24,11 +24,15 @@ submitBtn.addEventListener('click', function() {
     alert("All fields are required");
     return false;
   }
+  if (pwd === pwd2) {
+    alert("Password do not match");
+    return false;
+  }
   return true;
-})
+}); */
 
 /////////////////////////////////////////////////////
-/* Try this */
+/* Try this  */
 function validateForm() {
   let fname = document.getElementById("fname").value;
   let lname = document.getElementById("lname").value;
@@ -40,8 +44,8 @@ function validateForm() {
       alert("All fields are required");
       return false;
   }
-  
-  if (pwd == pwd2) {
+
+  if (pwd === pwd2) {
     alert("Password do not match");
     return false;
   }
