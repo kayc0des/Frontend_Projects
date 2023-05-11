@@ -45,8 +45,19 @@ function validateForm() {
       return false;
   }
 
-  if (pwd === pwd2) {
+  if (pwd !== pwd2) {
     alert("Password do not match");
+    return false;
+  }
+
+  if (pwd.length < 8) {
+    alert("Password must be at least 8 characters long");
+    return false;
+  }
+
+  if (pwd.charCodeAt(0) >= 65 && pwd.charCodeAt(0) <= 90) {
+  } else {
+    alert("Password must begin with an Uppercase Character (A-Z)");
     return false;
   }
   return true;
