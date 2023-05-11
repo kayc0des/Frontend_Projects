@@ -47,7 +47,7 @@ input.inputField{
     color: white;
     border-radius: 20px;
     border: none;
-    font-size: large;
+    font-size: 14px;
 }
 
 .submitbtn:hover {
@@ -72,5 +72,5 @@ input.inputField{
 }
 
 label {
-    font-size: 12px;
+    font-size: 14px;
 }

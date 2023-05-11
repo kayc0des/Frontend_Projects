@@ -45,6 +45,11 @@ function validateForm() {
       return false;
   }
 
+  if( typeof(fname == 'string') && typeof(lname == 'string')) {
+    alert("Names must be a string");
+    return false;
+  }
+
   if (pwd !== pwd2) {
     alert("Password do not match");
     return false;
