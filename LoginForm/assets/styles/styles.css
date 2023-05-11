@@ -70,3 +70,7 @@ input.inputField{
 .inputField:focus {
     border: 2px solid rgb(200, 37, 237);
 }
+
+label {
+    font-size: 12px;
+}
