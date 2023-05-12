@@ -77,6 +77,10 @@ function verifyUser() {
     alert("Please fill in all fields");
     return false;
   }
+  if (pwd.length < 8) {
+    alert("Password must be at least 8 characters long");
+    return false;
+  }
   //check database if the submitted data matches data existing in the database
 }
 ////////////////////////////////////////////////////
