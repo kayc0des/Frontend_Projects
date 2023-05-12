@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/bg02.jpg);
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     background-repeat: no-repeat;
@@ -57,14 +57,16 @@ input.inputField{
 .btn{
     background-color: rgb(200, 37, 237);
     height: 40px;
-    width: 40%;
+    width: 50%;
     color: white;
     border-radius: 20px;
     border: none;
+    display: none;
+    font-size: 14px;
 }
 
-.btn:active {
-    background-color: #efeeee;
+.btn:hover {
+    background-color: rgb(68, 6, 82);
 }
 
 .inputField:focus {
@@ -73,4 +75,8 @@ input.inputField{
 
 label {
     font-size: 14px;
+}
+
+#newUser {
+    display: none;
 }

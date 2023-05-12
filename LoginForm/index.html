@@ -11,19 +11,28 @@
     <div class="container">
         <div id="form" class="form">
             <h1 id="heading">Sign up</h1>
-            <form name="myForm" class="signup" method="post" onsubmit="return validateForm()">
-                <label for="fname">First name</label><br>
-                <input class="inputField" type="text" id="fname" name="fname" placeholder="John"><br>
-                <label for="lname">Last name</label><br>
-                <input class="inputField" type="text" id="lname" name="lname" placeholder="Doe"><br>
+            <hr>
+            <form id="myForm" name="myForm" class="signup" method="post" onsubmit="return validateForm()">
+                <div id="signUpData">
+                    <label for="fname">First name</label><br>
+                    <input class="inputField" type="text" id="fname" name="fname" placeholder="John"><br>
+                    <label for="lname">Last name</label><br>
+                    <input class="inputField" type="text" id="lname" name="lname" placeholder="Doe"><br>
+                </div>
                 <label for="email">Email</label><br>
                 <input class="inputField" type="email" id="email" name="email" placeholder="johndoe@example.com"><br>
                 <label for="pwd">Password</label><br>
                 <input class="inputField" type="password" id="pwd" name="pwd"><br>
-                <label for="pwd2">Confirm Password</label><br>
-                <input class="inputField" type="password" id="pwd2" name="pwd2"><br><br>
-                <input id="submit" class="submitbtn" type="submit" value="Submit">
-                <p style="font-size: 14px;" id="signin">Have an account? <a href="">Sign in</a></p>
+                <div id="confirmPassword">
+                    <label for="pwd2">Confirm Password</label><br>
+                    <input class="inputField" type="password" id="pwd2" name="pwd2">
+                    <a id="forgotPassword" href=""></a>
+                </div><br><br>
+                <input id="submit" class="submitbtn" type="submit" value="Sign up">
+                <button class="btn" id="login">Log in</button>
+                <p style="font-size: 14px;" id="existingUser">Have an account? <a id="" href="">Sign in</a></p>
+                <p style="font-size: 14px;" id="newUser">Not a member? <a href="index.html">Sign up</a></p>
+
             </form><br><br>
             <!--
                 <div class="section">
