@@ -40,8 +40,8 @@ function validateForm() {
   let pwd2 = document.getElementById("pwd2").value;
 
   if (fname == "" || lname == "" || email == "" || pwd == "" || pwd2 == "") {
-      alert("All fields are required");
-      return false;
+    swal("Oops" ,  "All Fields are required!" ,  "error")
+    return false;
   }
 
   if( typeof(fname == 'string') && typeof(lname == 'string')) {
