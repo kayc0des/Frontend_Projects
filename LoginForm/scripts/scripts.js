@@ -4,6 +4,7 @@ const signin = document.getElementById("existingUser");
 
 signin.addEventListener("click", function(event) {
   event.preventDefault();
+  /* DOM store objects to be manipulated in variables */
   const header = document.getElementById("heading");
   const formParent = document.getElementById("myForm");
   const formChild1 = document.getElementById("signUpData");
@@ -14,15 +15,16 @@ signin.addEventListener("click", function(event) {
   const forgotPassword = document.getElementById("forgotPassword");
 
 
-  header.innerHTML = "Sign in";
+  header.innerHTML = "Sign in"; //Change Sign up to Sign in
+  formParent.removeAttribute("onsubmit"); //Trigger a different event handler when on sign in page
   formParent.removeChild(formChild1); //Remove Last Name and First Name Fields
   formParent.removeChild(formChild2); //Remove Confirm Password Field
   submitBtn.style.display = 'none';
   loginBtn.style.display = 'inline-block';
   signin.style.display = "none";
   signUp.style.display = 'inline-block';
-  forgotPassword.innerHTML = "Forgot Password?";
-  forgotPassword.setAttribute("href", "https://example.com");
+  forgotPassword.style.display = 'inline-block'; //display forgot password link
+  loginBtn.setAttribute('onclick', 'return verifyUser()'); //verify user function called when log in button is clicked
 });
 
 
@@ -30,6 +32,7 @@ signin.addEventListener("click", function(event) {
 /////////////////////////////////////////////////////
 /* Try this  */
 function validateForm() {
+  /* Get form user input values and store them in Variables */
   let fname = document.getElementById("fname").value;
   let lname = document.getElementById("lname").value;
   let email = document.getElementById("email").value;
@@ -64,6 +67,18 @@ function validateForm() {
   return true;
 }
 
+function verifyUser() {
+  //get form submit details
+  let email = document.getElementById("email").value;
+  let pwd = document.getElementById("pwd").value;
+
+  //validate form
+  if (email == "" || pwd == "") {
+    alert("Please fill in all fields");
+    return false;
+  }
+  //check database if the submitted data matches data existing in the database
+}
 ////////////////////////////////////////////////////
 /* Form Validation 
 const submitBtn = document.getElementById("submit");

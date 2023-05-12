@@ -29,6 +29,10 @@ body {
     transform: translate(-50%, -50%);
     width: 60%;
     text-align: center;
+    /*background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 150px;*/
 }
 
 input.inputField{
@@ -77,6 +81,7 @@ label {
     font-size: 14px;
 }
 
-#newUser {
+#newUser,
+#forgotPassword {
     display: none;
 }
